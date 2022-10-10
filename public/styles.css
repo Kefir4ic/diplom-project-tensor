@@ -19,10 +19,17 @@
 
 .header {
     height: 60px;
-    line-height: 18px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
+}
+.header__logo {
+    position: absolute;
+    top: 10px;
+    min-width: 200px;
+    left: calc((100% - 200px) / 2);
+    text-align: center;
 }
 
 
@@ -69,7 +76,6 @@
 }
 
 .footer__hr {
-    display: block;
     border: 0;
     border-top: 1px solid #ccc;
     margin: 1em 0;
@@ -125,7 +131,6 @@
 .main__hr {
     background: #b90000;
     height: 5px;
-    left: 50%;
     width: 50px;
     display: block;
 }
@@ -142,9 +147,11 @@
 
 .singer_card {
     background: linear-gradient(to bottom, #141414, #b90000);
-    border-radius: 100px 100px;
-    width: 100px;
-    height: 100px;
+    border-radius: 100%;
+    min-width: 100px;
+    min-height: 100px;
+    max-width: 200px;
+    max-height: 200px;
 }
 
 .singer {
@@ -152,7 +159,7 @@
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
-    width: 15%;
+    min-width: 15%;
     margin-top: 20px;
 }
 
@@ -172,13 +179,13 @@
     align-items: center;
     align-content: center;
     flex-direction: row;
-    width: 30%;
+    min-width: 30%;
     padding: 10px 40px;
 }
 
 .track_card {
-    width: 40px;
-    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
     background: linear-gradient(to bottom, #141414, #b90000);
 }
 
@@ -216,8 +223,8 @@
 }
 
 .search__bar{
-    width: 620px;
-    height: 40px;
+    min-width: 620px;
+    min-height: 40px;
     margin: 24px;
     padding: 6px 40px 6px 12px;
 }
@@ -244,15 +251,15 @@
 }
 
 .track__image {
-    width: 34px;
-    height: 34px;
+    min-width: 34px;
+    min-height: 34px;
     background: linear-gradient(to bottom, #141414, #b90000);
 }
 
 .track__name {
     color: #242424;
     font-size: 14px;
-    margin: 0 7.5px;
+    margin: 0 7px;
     font-weight: bold;
 }
 
@@ -279,23 +286,19 @@
   display:grid;
   place-items:center;
   cursor:pointer;
-  width: 34px;
-  height: 34px;
+  min-width: 34px;
+  min-height: 34px;
   background:#efeeee;
   border-radius:50%;
   box-shadow: 10px 10px 10px rgba(0,0,0,0.1),
     -10px -10px 10px rgba(255,255,255,0.6);
 }
-.container .fas{
-  display:grid;
-  place-items:center;
+.fas{
   font-size: 12px;
   color:gray;
 }
 .container:active{
   box-shadow: inset 10px 10px 10px rgba(0,0,0,0.1),
     inset -10px -10px 10px rgba(255,255,255,0.6);
-}
-.container:active .fas{
-  color:#721efa;
+    color:#721efa;
 }
