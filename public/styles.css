@@ -175,6 +175,7 @@
 }
 
 .track {
+    flex: 1;
     display: flex;
     align-items: center;
     align-content: center;
@@ -201,11 +202,6 @@
     font-size: 14px;
 }
 
-.genre {
-    color: grey;
-    font-size: 12px;
-}
-
 .card_subtitle {
     color:#141414;
     font-size: 12px;
@@ -222,11 +218,25 @@
     font-size: 30px;
 }
 
-.search__bar{
-    min-width: 620px;
+.search__bar__container {
+    display: flex;
+    flex-direction: row;
+}
+
+.search__bar {
+    min-width: 500px;
     min-height: 40px;
     margin: 24px;
     padding: 6px 40px 6px 12px;
+}
+
+.search__button {
+    background-color: #b90000;
+    color: #000000;
+    min-width: 100px;
+    min-height: 40px;
+    margin: 24px;
+    border-radius: 5px;
 }
 
 .main__title{
@@ -245,7 +255,6 @@
 
 .track__card{
     display: flex;
-    justify-content: space-around;
     align-items: center;
     padding: 9px 15px;
 }
@@ -253,6 +262,7 @@
 .track__image {
     min-width: 34px;
     min-height: 34px;
+    flex: 0;
     background: linear-gradient(to bottom, #141414, #b90000);
 }
 
@@ -261,25 +271,22 @@
     font-size: 14px;
     margin: 0 7px;
     font-weight: bold;
+    flex: 2;
 }
 
 .track__artist {
     color: #242424;
     font-size: 14px;
-    margin: 0 7.5px;
+    margin: 0 7px;
+    flex: 2;
 }
 
-.track__duration {
-    color: #999999;
-    font-size: 14px;
-    margin: 0 0 0 7.5px;
-}
 
 .track__hr {
     border: 0;
     border-top: 1px solid #ccc;
     margin-left: 30px;
-    width: 90%;
+    width: 70%;
 }
 
 .container{
@@ -290,6 +297,7 @@
   min-height: 34px;
   background:#efeeee;
   border-radius:50%;
+  margin-right: 15px;
   box-shadow: 10px 10px 10px rgba(0,0,0,0.1),
     -10px -10px 10px rgba(255,255,255,0.6);
 }
