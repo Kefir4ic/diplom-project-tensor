@@ -1,9 +1,13 @@
-// import { createHTMLElement } from "./create_html";
-
+// получает со страницы HTML обьект с классом popular__singers
 const singers = document.getElementsByClassName('popular__singers')[0];
+// получает со страницы HTML обьект с классом popular__tracks
 const tracks = document.getElementsByClassName('popular__tracks')[0];
+// ключ для использования API
 const key = '97913b5522a98e8336268f039cfd0b1a'
 
+/**
+ * Добавляет на стринцу  список популярных исполнителей
+ */
 fetch(`http://ws.audioscrobbler.com/2.0/?method=chart.gettopartists&api_key=${key}&format=json`)
     .then((response) => response.json())
     .then((json) => {
@@ -25,7 +29,9 @@ fetch(`http://ws.audioscrobbler.com/2.0/?method=chart.gettopartists&api_key=${ke
         window.alert('Ошибка загрузк популярных исполнителей! Проверьте подключение к интернету!');
     })
 
-
+/**
+ * добавляет на страницу список популярных треков
+ */
 fetch(`http://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks&api_key=${key}&format=json`)
     .then((response) => response.json())
     .then((json) => {

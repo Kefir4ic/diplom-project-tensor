@@ -1,12 +1,17 @@
-// import { createHTMLElement } from "./create_html";
-
+// получает со страницы HTML обьект с классом search__bar
 const input = document.getElementsByClassName('search__bar')[0];
+// получает со страницы HTML обьект с классом search__button
 const button = document.getElementsByClassName('search__button')[0];
+// получает со страницы HTML обьект с классом main__track__list
 const tracks = document.getElementsByClassName('main__track__list')[0];
+// получает со страницы HTML обьект с классом search__title
 const search_title = document.getElementsByClassName('search__title')[0];
+// ключ для использования API
 const key = '97913b5522a98e8336268f039cfd0b1a'
 
-
+/**
+ * выполняет функцию поиска и добавляет на страницу результаты поиска
+ */
 button.addEventListener('click', (_) => {
     if (input.value === '') {
         window.alert('Вы ничего не ввели в поле для поиска!\nПожалуйста, введите данные!');
