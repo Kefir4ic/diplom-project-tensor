@@ -1,3 +1,5 @@
+import {createHTMLElement, key} from './key_and_function'
+
 // получает со страницы HTML обьект с классом search__bar
 const input = document.getElementsByClassName('search__bar')[0];
 // получает со страницы HTML обьект с классом search__button
@@ -6,15 +8,14 @@ const button = document.getElementsByClassName('search__button')[0];
 const tracks = document.getElementsByClassName('main__track__list')[0];
 // получает со страницы HTML обьект с классом search__title
 const search_title = document.getElementsByClassName('search__title')[0];
-// ключ для использования API
-const key = '97913b5522a98e8336268f039cfd0b1a'
+
 
 /**
  * выполняет функцию поиска и добавляет на страницу результаты поиска
  */
 button.addEventListener('click', (_) => {
     if (input.value === '') {
-        window.alert('Вы ничего не ввели в поле для поиска!\nПожалуйста, введите данные!');
+        window.alert("You haven't entered anything in the search box!\nPlease enter the data!");
     }
     else {
         search_title.innerHTML = `Search results for "${input.value}"`
@@ -24,7 +25,7 @@ button.addEventListener('click', (_) => {
                 
                 const searched = json.results.trackmatches.track;
                 if (searched.length === 0){
-                    window.alert("по Вашему запросу ничео не найдено! Попробуйте поменять данные!");
+                    window.alert("Nothing was found for your query! Try changing the data!");
                     tracks.innerHTML = 'Nothing found!';
                 }
                 else{
@@ -57,23 +58,11 @@ button.addEventListener('click', (_) => {
                     })
                 }
             })
-            .catch((e) => {
-                window.alert(e);
+            .catch(() => {
+                window.alert("Search error! Check your internet connection!");
             })
 
     }
 })
 
 
-/**
- * Создает HTML элемент
- * @param {string} tag - HTML тег
- * @param {string} className - имя класса, которое нужно присвоить элементу 
- * @returns {string} HTML элемент
- */
-function createHTMLElement(tag, className) {
-    const element = document.createElement(tag);
-    element.className = className;
-
-    return element;
-}

@@ -1,9 +1,9 @@
+import {createHTMLElement, key} from './key_and_function'
+
 // получает со страницы HTML обьект с классом popular__singers
 const singers = document.getElementsByClassName('popular__singers')[0];
 // получает со страницы HTML обьект с классом popular__tracks
 const tracks = document.getElementsByClassName('popular__tracks')[0];
-// ключ для использования API
-const key = '97913b5522a98e8336268f039cfd0b1a'
 
 /**
  * Добавляет на стринцу  список популярных исполнителей
@@ -26,7 +26,7 @@ fetch(`http://ws.audioscrobbler.com/2.0/?method=chart.gettopartists&api_key=${ke
         })
     })
     .catch(() => {
-        window.alert('Ошибка загрузк популярных исполнителей! Проверьте подключение к интернету!');
+        window.alert('Error loading popular artists! Check your internet connection!');
     })
 
 /**
@@ -55,19 +55,5 @@ fetch(`http://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks&api_key=${key
         })
     })
     .catch(() => {
-        window.alert('Ошибка загрузки популярных треков! Проверьте подключение к интернету!');
+        window.alert('Error loading popular tracks! Check your internet connection!');
     })
-
-
-/**
- * Создает HTML элемент
- * @param {string} tag - HTML тег
- * @param {string} className - имя класса, которое нужно присвоить элементу 
- * @returns {string} HTML элемент
- */
-function createHTMLElement(tag, className) {
-    const element = document.createElement(tag);
-    element.className = className;
-
-    return element;
-}
