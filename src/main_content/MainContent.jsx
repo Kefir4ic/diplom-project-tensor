@@ -1,5 +1,6 @@
 import SingersList from '../popular_singers/SingersList';
 import PopularTracksList from '../popular_tracks/PopularTracksList';
+import './main_content.css';
 
 export default function MainContent() {
     
