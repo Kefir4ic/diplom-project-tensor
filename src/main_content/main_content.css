@@ -1,0 +1,22 @@
+.main__content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content__title {
+    padding: 10px 40px;
+    color:#141414
+}
+
+.content__subtitle {
+    padding: 10px 40px;
+    color:#141414
+}
+
+.main__hr {
+    background: #b90000;
+    height: 5px;
+    width: 50px;
+    display: block;
+}

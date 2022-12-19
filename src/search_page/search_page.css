@@ -1,0 +1,31 @@
+.search__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.search__title {
+    color: #242424;
+    margin: 24px;
+    font-size: 30px;
+}
+
+.search__bar__container {
+    display: flex;
+    flex-direction: row;
+}
+
+.search__bar {
+    min-width: 500px;
+    min-height: 40px;
+    margin: 24px;
+    padding: 6px 40px 6px 12px;
+}
+
+.search__button {
+    background-color: #b90000;
+    color: #000000;
+    min-width: 100px;
+    min-height: 40px;
+    margin: 24px;
+    border-radius: 5px;
+}

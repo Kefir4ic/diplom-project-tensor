@@ -1,0 +1,27 @@
+.popular__singers {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.singer_card {
+    background: linear-gradient(to bottom, #141414, #b90000);
+    border-radius: 100%;
+    min-width: 100px;
+    min-height: 100px;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.singer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    min-width: 15%;
+    margin-top: 20px;
+}

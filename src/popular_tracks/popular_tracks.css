@@ -1,0 +1,43 @@
+.popular__tracks {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.track {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+    min-width: 30%;
+    padding: 10px 40px;
+}
+
+.track_card {
+    min-width: 40px;
+    min-height: 40px;
+    background: linear-gradient(to bottom, #141414, #b90000);
+}
+
+.track_description {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.card_title {
+    color:#141414;
+    font-size: 14px;
+}
+
+.card_subtitle {
+    color:#141414;
+    font-size: 12px;
+}
