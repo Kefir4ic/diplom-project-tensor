@@ -3,6 +3,11 @@ import Singer from './Singer';
 import { key } from '../api_key'; 
 import './popular_singers.css';
 
+
+/**
+ * добавляет на страницу список популярных исполнителей
+ * @returns список популярных исполнителей
+ */
 export default function SingersList() {
     const [singers, setSingers] = useState([]);
     useEffect(() => {
@@ -20,7 +25,7 @@ export default function SingersList() {
     return (
         <div className='popular__singers'>
             { singers.map((artist) => {
-                return <Singer key={ artist.name } artist={artist}/>
+                return <Singer key={ artist.url } artist={artist}/>
             })}
         </div>
     )

@@ -5,12 +5,15 @@ import './index.css';
 import App from './App';
 import Search from './Search';
 
-
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 
+
+/**
+ * создание routing для навигации по сайту
+ */
 const router = createBrowserRouter([
   {
     path: "/",
@@ -22,6 +25,10 @@ const router = createBrowserRouter([
   },
 ]);
 
+
+/**
+ * рендер страниц
+ */
 ReactDOM.render(
   <React.StrictMode>
     <RouterProvider router={router} />

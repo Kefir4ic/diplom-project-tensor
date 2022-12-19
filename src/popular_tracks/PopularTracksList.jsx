@@ -3,6 +3,11 @@ import PopularTrack from './PopularTrack';
 import { key } from '../api_key'; 
 import './popular_tracks.css';
 
+
+/**
+ * добавляет на страницу список популярных треков
+ * @returns список популярных трекнов
+ */
 export default function PopularTracksList() {
     const [poularTracks, setPopularTracks] = useState([]);
  
@@ -22,7 +27,7 @@ export default function PopularTracksList() {
         <div className='popular__tracks'>
             { 
                 poularTracks.map((track) => {
-                return <PopularTrack key={ track.name } track={ track }/>
+                return <PopularTrack key={ track.url } track={ track }/>
             })}
         </div>
     );

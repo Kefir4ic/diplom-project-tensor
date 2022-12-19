@@ -1,5 +1,11 @@
 import './searched_track.css';
 
+
+/**
+ * 
+ * @param {object} track - объект, хранящий информацию об искомом треке
+ * @returns карточку искомого трека
+ */
 export default function SearchedTrack({ track }) {
     return (
         <div>

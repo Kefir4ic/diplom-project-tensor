@@ -1,5 +1,11 @@
 import './popular_tracks.css';
 
+
+/**
+ * 
+ * @param {object} track - объект, хранящий информацию об артисте
+ * @returns карточку популярного трека
+ */
 export default function PopularTrack({ track }) {
     return (
         <div className='track'>

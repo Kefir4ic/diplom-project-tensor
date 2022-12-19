@@ -1,5 +1,10 @@
 import './header.css';
 
+
+/**
+ * создает header для страниц
+ * @returns header
+ */
 export default function Header() {
     return (
         <header className="header">

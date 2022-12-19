@@ -2,6 +2,11 @@ import SingersList from '../popular_singers/SingersList';
 import PopularTracksList from '../popular_tracks/PopularTracksList';
 import './main_content.css';
 
+
+/**
+ * главная страница приложения, содержащая список популярных артистов и треков
+ * @returns главную страницу приложения
+ */
 export default function MainContent() {
     
     return (
@@ -20,7 +25,6 @@ export default function MainContent() {
                 <hr className="main__hr"/>
 
                 <PopularTracksList/>
-
 
                 <div className="popular__tracks">  </div>
             </div>

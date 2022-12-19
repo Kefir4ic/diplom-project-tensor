@@ -3,15 +3,22 @@ import SearchedTrack from './SearchedTrack';
 import { key } from '../api_key'; 
 import './search_page.css';
 
+
+/**
+ * Страница приложения с поиском
+ * @returns страницу с поиском
+ */
 export default function SearchPage() {
     const [searchedTracks, setSearchedTracks] = useState([]);
     const [searchResult, setSearchResult] = useState("");
     const [inputValue, setInputValue] = useState("");
 
+    // обработка пустой поисковой строк и задание значения для поиска "по умолчанию"
     if (searchResult === "") {
         setSearchResult("Naruto");
     }
 
+    // поиск трека с помощью API
     useEffect(() => {
         fetch(`http://ws.audioscrobbler.com/2.0/?method=track.search&track=${searchResult}&api_key=${key}&format=json`)
             .then((response) => response.json())
@@ -45,7 +52,7 @@ export default function SearchPage() {
                 <div className="main__track__list">
                 { 
                     searchedTracks.map((track) => {
-                        return <SearchedTrack key={ track.name-track.artist} track={track}/>
+                        return <SearchedTrack key={ track.url} track={track}/>
                     })
                 }
                 </div>

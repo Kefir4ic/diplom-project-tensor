@@ -1,5 +1,10 @@
 import './footer.css';
 
+
+/**
+ * создает footer для стрианиц
+ * @returns footer
+ */
 export default function Footer() {
     return (
         <footer className="footer">
