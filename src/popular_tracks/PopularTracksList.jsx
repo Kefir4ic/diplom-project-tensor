@@ -5,7 +5,7 @@ import './popular_tracks.css';
 
 export default function PopularTracksList() {
     const [poularTracks, setPopularTracks] = useState([]);
-
+ 
     useEffect(() => {
         fetch(`http://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks&api_key=${key}&format=json`)
         .then((response) => response.json())
@@ -17,7 +17,7 @@ export default function PopularTracksList() {
         .catch(() => {
             window.alert('Error loading popular tracks! Check your internet connection!');
         })
-    });
+    }, []);
     return (
         <div className='popular__tracks'>
             { 

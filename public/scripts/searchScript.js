@@ -22,7 +22,7 @@ button.addEventListener('click', (_) => {
         fetch(`http://ws.audioscrobbler.com/2.0/?method=track.search&track=${input.value}&api_key=${key}&format=json`)
             .then((response) => response.json())
             .then((json) => {
-                
+                 
                 const searched = json.results.trackmatches.track;
                 if (searched.length === 0){
                     window.alert("Nothing was found for your query! Try changing the data!");

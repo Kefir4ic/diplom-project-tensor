@@ -15,8 +15,8 @@ export default function Header() {
             </div>
 
             <nav className="header__nav">
-                <a href="./search.html" className="header__link">Search</a>
-                <a href="./index.html" className="header__link">Home</a>
+                <a href="./search" className="header__link">Search</a>
+                <a href="/" className="header__link">Home</a>
                 <a href="./" className="header__link">Live</a>
                 <a href="./" className="header__link">Music</a>
                 <a href="./" className="header__link">Charts</a>
